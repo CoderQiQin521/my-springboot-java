@@ -5,7 +5,7 @@
 <!--核心配置-->
 <configuration>
     <!--可以配置多套环境-->
-    <environments default="pro">
+    <environments default="development">
         <!-- 数据库环境 -->
         <environment id="development">
             <!-- 使用JDBC事务管理 -->
@@ -19,16 +19,7 @@
                 <property name="password" value="root"/>
             </dataSource>
         </environment>
-        <environment id="pro">
-            <transactionManager type="JDBC"/>
-            <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url"
-                          value="jdbc:mysql://180.76.185.25:3306/myddc-app?useUnicode=true&amp;characterEncoding=utf8"/>
-                <property name="username" value="myddc_app"/>
-                <property name="password" value="mSde847Ef^-_)9!"/>
-            </dataSource>
-        </environment>
+
     </environments>
     <!-- 映射器 -->
 <!--    <mappers>-->
@@ -36,6 +27,7 @@
 <!--&lt;!&ndash;        <mapper resource="UserMapper.xml"/>&ndash;&gt;-->
 <!--    </mappers>-->
     <mappers>
+        <mapper resource="ShopMapper.xml"/>
         <mapper class="com.example.my_java.mapper.UserMapper"/>
     </mappers>
 </configuration>
