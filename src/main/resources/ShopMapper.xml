@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间绑定mapper接口-->
+<mapper namespace="com.example.my_java.mapper.ShopMapper">
+    <!--pojo的实体类-->
+    <!--id对应接口的方法-->
+    <select id="getShops" resultType="com.example.my_java.pojo.Shop">
+        select *
+        from lgcms_shop limit #{page},#{size}
+    </select>
+
+    <select id="getShopById" resultType="com.example.my_java.pojo.Shop">
+        select *
+        from lgcms_shop
+        where id = #{id}
+    </select>
+</mapper>
