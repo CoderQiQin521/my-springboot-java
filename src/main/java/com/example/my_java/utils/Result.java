@@ -2,8 +2,8 @@ package com.example.my_java.utils;
 
 public class Result<T> {
     private Integer code;
-    private String msg;
     private T data;
+    private String msg;
 
     public Integer getCode() {
         return code;

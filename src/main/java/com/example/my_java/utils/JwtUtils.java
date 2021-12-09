@@ -6,8 +6,11 @@ import com.auth0.jwt.algorithms.Algorithm;
 import java.util.Calendar;
 import java.util.Date;
 
+@MyAnnotation(info = "注解执行了")
 public class JwtUtils {
+//    @Deprecated
     public static String createToken(String userId, String realname) {
+
         Calendar nowTime = Calendar.getInstance();
         nowTime.add(Calendar.MINUTE, 30);
         Date expiresDate = nowTime.getTime();
